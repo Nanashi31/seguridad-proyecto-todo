@@ -1,0 +1,114 @@
+:host {
+  .page-container {
+    padding-top: 0;
+  }
+  .page-header {
+    padding: 1.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .page-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #f9fafb;
+    margin: 0;
+  }
+}
+
+.grid-toggle {
+  display: flex;
+  background-color: #0f172a;
+  border: 1px solid #1e293b;
+  border-radius: 999px;
+  padding: 0.25rem;
+
+  button {
+    background: transparent;
+    border: none;
+    color: #94a3b8;
+    padding: 0.5rem 1rem;
+    border-radius: 999px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+
+    &.active {
+      background-color: #2563eb;
+      color: #f1f5f9;
+    }
+  }
+}
+
+.camaras-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+// Responsive grid columns - Móvil: 2 columnas, Desktop: 3-4 columnas
+.grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+  
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  }
+}
+
+.grid-3 {
+  grid-template-columns: repeat(2, 1fr);
+  
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}
+
+.grid-4 {
+  grid-template-columns: repeat(2, 1fr);
+  
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  @media (min-width: 1280px) {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
+
+// Placeholder styles
+.cam-placeholder {
+  background: #1e1e1e;
+  border: 1px solid #1e293b;
+  border-radius: 8px;
+  height: 160px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  transition: background-color 0.2s, border-color 0.2s;
+
+  &:hover {
+    background: #252525;
+    border-color: #334155;
+  }
+}
+
+.cam-placeholder__icon {
+  font-size: 2.5rem;
+  opacity: 0.6;
+}
+
+.cam-placeholder__text {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #94a3b8;
+  font-weight: 500;
+}

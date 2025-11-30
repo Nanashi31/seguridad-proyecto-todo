@@ -1,0 +1,105 @@
+.dashboard {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1.2fr);
+  gap: 1.5rem;
+}
+
+.dashboard-left,
+.dashboard-right {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.card {
+  background: #0f172a;
+  border: 1px solid #1e293b;
+  border-radius: 16px;
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.card-title {
+  margin: 0 0 1rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #f1f5f9;
+}
+
+.map-placeholder {
+  min-height: 400px;
+  height: 100%;
+  border-radius: 12px;
+  background: #020617;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #64748b;
+  font-size: 0.9rem;
+  border: 1px dashed #1e293b;
+}
+
+// Styles for the lists in the right-hand cards
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.9rem;
+    color: #94a3b8;
+  }
+}
+
+// Styles for alertas de seguridad
+.alertas-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.alerta-item {
+  padding: 1rem;
+  border-radius: 8px;
+  border-left: 4px solid;
+  background: rgba(30, 41, 59, 0.5);
+  transition: background-color 0.2s;
+
+  &:hover {
+    background: rgba(30, 41, 59, 0.7);
+  }
+
+  &.alerta-alerta {
+    border-left-color: #ef4444;
+    background: rgba(239, 68, 68, 0.1);
+  }
+
+  &.alerta-advertencia {
+    border-left-color: #f59e0b;
+    background: rgba(245, 158, 11, 0.1);
+  }
+}
+
+.alerta-mensaje {
+  margin: 0 0 0.5rem;
+  font-size: 0.9rem;
+  color: #f1f5f9;
+  line-height: 1.5;
+
+  strong {
+    color: #fff;
+    font-weight: 600;
+  }
+}
+
+.alerta-hora {
+  display: block;
+  font-size: 0.75rem;
+  color: #94a3b8;
+}

@@ -1,0 +1,35 @@
+<div class="dashboard">
+  <div class="dashboard-left">
+    <div class="card">
+      <h2 class="card-title">Mapa de Activos en Vivo</h2>
+      <div class="map-placeholder">Mapa en vivo aquí (300x300)</div>
+    </div>
+
+    <app-card heading="Alertas de Seguridad">
+      <div class="alertas-container">
+        <div *ngFor="let a of alertas" class="alerta-item" [ngClass]="'alerta-' + a.tipo">
+          <p class="alerta-mensaje">
+            <strong>{{ a.camara }}</strong> — {{ a.mensaje }}
+          </p>
+          <small class="alerta-hora">{{ a.hora }}</small>
+        </div>
+      </div>
+    </app-card>
+  </div>
+
+  <div class="dashboard-right">
+    <div class="card">
+      <h2 class="card-title">Alertas en Tiempo Real</h2>
+      <ul>
+        <li>Intrusión en Bóveda 3 hace 2 minutos</li>
+        <li>Cámara sin señal C-12 hace 7 minutos</li>
+        <li>Incidente manual en Zona B hace 12 minutos</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2 class="card-title">Estado de Turnos del Personal</h2>
+      <app-estado-turnos></app-estado-turnos>
+    </div>
+  </div>
+</div>

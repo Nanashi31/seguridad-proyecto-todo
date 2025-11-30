@@ -1,0 +1,11 @@
+<article class="camara-card" [ngClass]="{ 'camara-card--alert': camara.tieneAlerta }">
+  <div class="camara-card__image" [style.background-image]="'url(' + camara.urlImagen + ')'">
+    <span class="camara-card__badge" *ngIf="camara.tieneAlerta">ALERTA</span>
+  </div>
+  <div class="camara-card__info">
+    <p class="camara-card__title">{{ camara.nombre }} · {{ camara.ubicacion }}</p>
+    <p class="camara-card__status" [ngClass]="camara.estado === 'Operativa' ? 'ok' : 'down'">
+      {{ camara.estado }}
+    </p>
+  </div>
+</article>
